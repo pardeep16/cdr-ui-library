@@ -4,6 +4,12 @@
 name: cd-ui-library
 
 on:
+  workflow_dispatch:
+    inputs:
+      job_name:
+        description: 'Build Storybook'
+        required: true
+        default: 'build_storybook'
   push:
     paths: ["stories/**", "src/components/**"]
     branches: [ master ]
