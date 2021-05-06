@@ -1,0 +1,11 @@
+{
+    "data":{
+        "navigation":{
+            "styles":{
+                "backgroundColor":"#053881",
+                "textColor":"#FFFFFF",
+                "activeColor":""
+            }
+        }
+    }
+}
