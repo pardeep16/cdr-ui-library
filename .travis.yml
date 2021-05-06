@@ -1,0 +1,19 @@
+language: node_js
+node_js:
+  - "stable"
+cache:
+  directories:
+  - node_modules
+  
+ stages:
+  - build
+  
+ install:
+    stage: .pre
+    script: npm install
+
+
+build:
+  stage: build
+  script:
+    - npm run build
