@@ -13,7 +13,7 @@ export const Navigation=({logo,styles,...props})=>{
         <section>
         <NavigationStyles />
          <Navbar className={`cdr-ui-navbar`} collapseOnSelect expand="lg">
-                <Link href={props.brandLogoPath} ><img src={props.brandLogo} height="70px" /></Link>
+                <Link href={props.brandUrl} >{props.brandImage ? <img src={props.brandImage} height="70px" /> : props.brandTitle ? (<h4>{props.brandTitle}</h4>):''}</Link>
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse id="basic-navbar-nav">
                 <Nav className={`m1-auto cdr-ui-navigation-items`}>
@@ -35,7 +35,9 @@ export const Navigation=({logo,styles,...props})=>{
 
 
 Navigation.propTypes = {
-    brandLogo:PropTypes.string,
+    brandUrl:PropTypes.string,
+    brandImage:PropTypes.string,
+    brandTitle:PropTypes.string,
     navigationItems:PropTypes.arrayOf(PropTypes.objectOf({
         label:PropTypes.string,
         path:PropTypes.string

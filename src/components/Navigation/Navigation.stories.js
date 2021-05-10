@@ -7,7 +7,7 @@ export default{
     title: 'Components/Navigation',
     component: Navigation,
     argTypes:{
-        brandLogo:{control:'file'},
+        brandImage:{control:'file'},
     }
 }
 
@@ -15,8 +15,9 @@ const Template = (args) => <Navigation {...args} />;
 
 export const Original = Template.bind({});
 Original.args = {
-    brandLogo:LogoImage,
-    brandLogoPath:'/',
+    brandImage:LogoImage,
+    brandUrl:'/',
+    brandTitle:'',
     
     navigationItems:[
         {

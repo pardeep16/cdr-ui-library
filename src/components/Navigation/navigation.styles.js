@@ -16,7 +16,7 @@ export const NavigationStyles=createGlobalStyle`
     .cdr-ui-nav-link{
         color:${props => props.theme.components.Navigation.text};
         padding-right:60px;
-        fontSize:16px;
+        font-size:16px;
         lineHeight:21px;
         &:hover{
             color:${props => props.theme.components.Navigation.secondary};

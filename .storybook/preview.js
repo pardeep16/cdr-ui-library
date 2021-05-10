@@ -1,20 +1,15 @@
 import 'bootstrap/dist/css/bootstrap.css';
 import { ThemeProvider } from 'styled-components';
+import {addDecorator} from '@storybook/react'
+import {withThemesProvider} from 'storybook-addon-styled-component-theme'
+import {original,customize} from '../src/themes/default';
 
-const theme = {
-  main: {
-  },
-  components:{
-    Navigation:{
-      'primary': '#053881',
-      'secondary': '#07A0B4',
-      'text': '#FFFFFF',
-      'itemsMargin':'220px'
-    }
-  }
-  
+const themes=[
+  original,customize
+]
 
-};
+
+
 
 
 export const parameters = {
@@ -27,10 +22,12 @@ export const parameters = {
   },
 }
 
-export const decorators = [
-  (Story) => (
-    <ThemeProvider theme={theme}>
-      <Story />
-    </ThemeProvider>
-  ),
-];
+// export const decorators = [
+//   (Story) => (
+//     <ThemeProvider theme={theme}>
+//       <Story />
+//     </ThemeProvider>
+//   ),
+// ];
+
+addDecorator(withThemesProvider(themes),ThemeProvider)

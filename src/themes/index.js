@@ -14,8 +14,15 @@ const theme = {
       'secondary': '#07A0B4',
       'text': '#FFFFFF',
       'itemsMargin':'220px'
+    },
+    Card:{
+      CardTitle:{
+        'size':'12px',
+        
+      }
     }
-  }
+  },
+  font:['Roboto']
   
 
 };
