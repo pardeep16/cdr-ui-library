@@ -66,6 +66,13 @@ export const original = {
                 'font-size':'1rem',
                 'border-bottom':'none'
             }
+        },
+        CardImage:{
+          styles:{
+            'height':'300px',
+            'width':'300px',
+
+          }
         }
       }
     },

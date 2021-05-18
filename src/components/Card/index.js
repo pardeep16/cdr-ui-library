@@ -1,33 +1,47 @@
 import PropTypes from 'prop-types';
-import RichText from '../RichText';
-import { CardTitle,CardBody,CardHeader,CdrCard } from './card-style';
+import { CardTitle,CardBody,CardHeader,
+    CdrCard,CardImage,CardWithImage,
+    CardHeaderText,PublishDate,CardDescription } from './card-style';
+import {formatDistance} from 'date-fns';
 
 const Card=(props)=>{
     return (
-        <CdrCard className={`card`}>
-            <div className={`card-body`}>
-            {props.header && <CardHeader>
-                {props.header}
-            </CardHeader>}
-                <CardTitle className="card-title">
-                    {props.title}
-                </CardTitle>
-                <CardBody className={`card-text`}>
-                    {props.body}
-                    {props.html && <RichText body={props.html}/>}
-                </CardBody>
-                {props.children}
-            </div>
+        
+        <CdrCard> 
+            
+            {props.thumbnail?
+            <CardWithImage thumbnail={props.thumbnail}/>:<CardImage />}
+            <CardBody>
+            <CardHeader>
+                <CardHeaderText>{props.headerText}</CardHeaderText>
+                {props.publishDate && <PublishDate>{formatDistance(new Date(props.publishDate),new Date(),{
+                addSuffix: true
+                })}</PublishDate>}
+            </CardHeader>
+            <CardTitle>
+                {props.title}
+            </CardTitle>
+            <CardDescription>
+                {props.description}
+            </CardDescription>
+            </CardBody>
+           
         </CdrCard>
     )
 }
 
 Card.prototypes={
     title:PropTypes.string,
-    body:PropTypes.string,
-    header:PropTypes.string,
-    html:PropTypes.string
+    description:PropTypes.string,
+    publishDate:PropTypes.string,
+    headerText:PropTypes.string,
+    author:PropTypes.object,
+    thumbnail:PropTypes.string
 
+}
+
+Card.defaultProps={
+    
 }
 
 

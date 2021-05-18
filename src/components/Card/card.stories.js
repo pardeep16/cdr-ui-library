@@ -16,7 +16,7 @@ export const example = Template.bind({});
 example.args={
     title:'Card Title',
     body:'Some body text',
-    header:''
+    thumbnail:''
 }   
 
 
@@ -24,8 +24,8 @@ export const htmlcard = Template.bind({});
 
 htmlcard.args={
     title:'Hello',
-    body:'',
-    header:'',
+    description:'',
+    thumbnail:'',
     html:'<h2>Title</h2><p>Welcome to TheCodeReveal!</p>'
 }
 
@@ -67,12 +67,15 @@ const theme={
 export const custom = Template.bind({});
 
 custom.args={
-    title:'Custom Title',
-    body:'Start coding in simple steps!',
-    header:'',
-    html:''
+    title:'ReactJS for Begineers',
+    description:'Start coding in simple steps!',
+    headerText:'ReactJS',
+    thumbnail:'https://reactjs.org/logo-og.png',
+    publishDate:'2021-05-04',
+    description:`React makes it painless to create interactive UIs.
+     Design simple views for each state in your application,
+      and React will efficiently update
+      and render just the right components when your data changes.`
 }
-
-custom.decorators=[(Story) => <ThemeProvider theme={theme}><Story/></ThemeProvider>]
 
 
