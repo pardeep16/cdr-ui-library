@@ -70,12 +70,16 @@ custom.args={
     title:'ReactJS for Begineers',
     description:'Start coding in simple steps!',
     headerText:'ReactJS',
-    thumbnail:'https://reactjs.org/logo-og.png',
+    thumbnail:'https://yt3.ggpht.com/ytc/AAUvwnjZOjZkrnfYd__cyvrh3WBIySGwrVL44Ch5A9T5lg=s900-c-k-c0x00ffffff-no-rj',
     publishDate:'2021-05-04',
     description:`React makes it painless to create interactive UIs.
      Design simple views for each state in your application,
       and React will efficiently update
-      and render just the right components when your data changes.`
+      and render just the right components when your data changes.`,
+    author:{
+        photo:'https://yt3.ggpht.com/ytc/AAUvwnjZOjZkrnfYd__cyvrh3WBIySGwrVL44Ch5A9T5lg=s900-c-k-c0x00ffffff-no-rj',
+        name:'The CodeReveal'
+    }
 }
 
 

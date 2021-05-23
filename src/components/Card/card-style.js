@@ -77,6 +77,29 @@ export const CdrCard = styled.div`
     ${({ theme }) => theme.components.Card && theme.components.Card.styles}
 `
 
+export const CardFooter=styled.section`
+    display:flex;
+    flex-direction:row;
+    width:100%;
+    ${({ theme }) => theme.components.Card.CardFooter && theme.components.Card.CardFooter.styles}
+`
+
+export const CardAuthorTitle=styled.p`
+    color:#007AE9;  
+    padding-top:5px;
+    padding-left:5px;
+    font-size:12px;
+    flex:1;
+`
+
+export const ReadMoreText=styled.p`
+    color:#007AE9;
+    flex:1;
+    cursor:pointerl
+    font-size:14px;
+    text-align:right;
+`
+
 
 CardTitle.defaultProps = {
     theme: {
